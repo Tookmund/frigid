@@ -10,7 +10,7 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_contact_monitor(true)
-	set_max_contacts_reported(5)
+	set_max_contacts_reported(1)
 	
 func _integrate_forces(state):
 	if (move):
