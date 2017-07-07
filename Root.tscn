@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Root.gd" type="Script" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ground.tscn" type="PackedScene" id=4]
+
+[node name="Root" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+
+[node name="enemy" parent="." instance=ExtResource( 3 )]
+
+[node name="ground" parent="." instance=ExtResource( 4 )]
+
+[node name="ground1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1176.56, 552.746 )
+
+[node name="ground2" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 2463.21, 1044.7 )
+
+[connection signal="pressed" from="player" to="." method="_on_player_pressed"]
+
+[connection signal="released" from="player" to="." method="_on_player_released"]
+
+
