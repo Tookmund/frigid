@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://script/Root.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/background.png" type="Texture" id=5]
 
 [node name="Root" type="Node"]
 
@@ -24,6 +25,14 @@ transform/pos = Vector2( 1176.56, 552.746 )
 [node name="ground2" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2463.21, 1044.7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 2060, 940 )
+transform/scale = Vector2( 11.7339, 9.0345 )
+z/z = -1
+texture = ExtResource( 5 )
 
 [connection signal="pressed" from="player" to="." method="_on_player_pressed"]
 
