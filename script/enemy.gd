@@ -11,9 +11,11 @@ func _ready():
 	# Initialization here
 	set_contact_monitor(true)
 	set_max_contacts_reported(1)
+	set_use_custom_integrator(true)
 	
 func _integrate_forces(state):
 	if (move):
+		state.integrate_forces()
 		var vel = state.get_linear_velocity()
 		vel.x += -10
 		state.set_linear_velocity(vel)
