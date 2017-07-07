@@ -4,7 +4,6 @@ var dx = 0
 var dy = 0
 signal released
 signal pressed
-var contact
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -15,7 +14,7 @@ func _ready():
 
 var move = 5
 func _input(event):
-	if (!contact):
+	if (get_colliding_bodies() == []):
 		dx = 0
 		dy = 0
 		return
@@ -37,7 +36,6 @@ func _input(event):
 
 var maxvel = 300
 func _integrate_forces(state):
-		contact = state.get_contact_count() > 0
 		if (dx != 0 or dy != 0):
 			var vel = state.get_linear_velocity()
 			vel.x += dx
