@@ -14,7 +14,7 @@ func _ready():
 	set_meta("Player",true)
 
 var move = 5
-var jump = 10
+var jump = 15
 func _input(event):
 	if (get_colliding_bodies() == []):
 		dx = 0
