@@ -36,7 +36,7 @@ func _on_End_body_enter( body ):
 
 func updateScore(d):
 	score += d
-	var ps = get_node("player/score")
+	var ps = get_node("player/camera/score")
 	ps.clear()
 	ps.add_text(str("Score: ",score))
 	
