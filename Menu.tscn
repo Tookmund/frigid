@@ -20,14 +20,17 @@ margin/bottom = -1.0
 
 [node name="Title" type="RichTextLabel" parent="Panel"]
 
+anchor/left = 3
+anchor/right = 3
+anchor/bottom = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 379.0
+margin/left = 134.5
 margin/top = 22.0
-margin/right = 598.0
-margin/bottom = 101.0
+margin/right = -84.5
+margin/bottom = 200.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode/enabled = true
 bbcode/bbcode = "Frigid"
@@ -35,14 +38,18 @@ visible_characters = -1
 
 [node name="VButtonArray" type="VButtonArray" parent="Panel"]
 
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 393.0
-margin/top = 123.0
-margin/right = 594.0
-margin/bottom = 407.0
+margin/left = 120.5
+margin/top = 178.0
+margin/right = -80.5
+margin/bottom = -106.0
 flat = false
 button/count = 0
 button/min_button_size = -1.0
@@ -69,14 +76,18 @@ script/script = ExtResource( 2 )
 [node name="loading" type="RichTextLabel" parent="Panel"]
 
 visibility/visible = false
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 317.0
-margin/top = 271.0
-margin/right = 671.0
-margin/bottom = 355.0
+margin/left = 196.5
+margin/top = 30.0
+margin/right = -157.5
+margin/bottom = 247.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode/enabled = true
 bbcode/bbcode = "Loading..."
