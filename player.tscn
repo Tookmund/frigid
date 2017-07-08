@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://script/player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/player.png" type="Texture" id=2]
+[ext_resource path="res://osb.fnt" type="BitmapFont" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -76,5 +77,20 @@ drag_margin/bottom = 0.2
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="score" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -254.0
+margin/top = -164.0
+margin/right = 117.0
+margin/bottom = -84.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
 
 
