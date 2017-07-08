@@ -13,3 +13,8 @@ func _ready():
 func _on_Death_body_enter( body ):
 	if (body.has_meta("Player")):
 		get_tree().change_scene("res://Menu.tscn")
+	else:
+		# Make sure platforms don't end up in death zone
+		var curpos = body.get_pos()
+		curpos.y -= 20
+		body.set_pos(curpos)
