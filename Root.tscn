@@ -22,12 +22,6 @@ mass = 5.10204
 
 [node name="ground" parent="." instance=ExtResource( 3 )]
 
-[node name="ground1" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1176.56, 552.746 )
-
-[node name="ground2" parent="." instance=ExtResource( 3 )]
-
 transform/pos = Vector2( 2463.21, 1044.7 )
 
 [node name="End" type="Area2D" parent="."]
@@ -57,6 +51,7 @@ __meta__ = {
 
 transform/pos = Vector2( 0.202838, 0.338052 )
 transform/scale = Vector2( 0.161123, 0.257634 )
+z/z = -1
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
