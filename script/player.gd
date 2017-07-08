@@ -35,6 +35,8 @@ func _input(event):
 	elif (event.is_action_released("move_jump")):
 		dy = 0
 		emit_signal("released")
+	elif(event.is_action_pressed("ui_cancel")):
+		get_tree().quit()
 
 var maxvel = 500
 func _integrate_forces(state):
