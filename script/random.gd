@@ -10,6 +10,7 @@ func _ready():
 	# Initialization here
 	ground = preload("res://ground.tscn")
 	updateScore(0)
+	get_node("music").play()
 
 var moveby = 1000
 func _on_End_body_enter( body ):
