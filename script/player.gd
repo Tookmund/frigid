@@ -11,8 +11,10 @@ func _ready():
 	set_process_input(true)
 	set_contact_monitor(true)
 	set_max_contacts_reported(1)
+	set_meta("Player",true)
 
 var move = 5
+var jump = 10
 func _input(event):
 	if (get_colliding_bodies() == []):
 		dx = 0
@@ -28,13 +30,13 @@ func _input(event):
 		dx = 0
 		emit_signal("released")
 	elif (event.is_action_pressed("move_jump")):
-		dy = -move
+		dy = -jump
 		emit_signal("pressed")
 	elif (event.is_action_released("move_jump")):
 		dy = 0
 		emit_signal("released")
 
-var maxvel = 300
+var maxvel = 500
 func _integrate_forces(state):
 		if (dx != 0 or dy != 0):
 			var vel = state.get_linear_velocity()
@@ -48,5 +50,5 @@ func _integrate_forces(state):
 				vel.y = maxvel
 			elif (vel.y < -maxvel):
 				vel.y = -maxvel
-			print(vel.x," ",vel.y)
+			#print(vel.x," ",vel.y)
 			state.set_linear_velocity(vel)
